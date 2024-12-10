@@ -8,30 +8,61 @@ body {
     color: #fff;
 	box-sizing: border-box;
 }
-
-header nav ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
+.navbar {
     display: flex;
-    justify-content: center;
-    background: #993737;
-    padding: 10px;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #993737; 
+    padding: 0px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra */
 }
 
-header nav ul li {
-    margin: 0 15px;
+/*Estilos enlaces barra*/
+.nav-links {
+    display: flex;
+    list-style: none;
 }
 
-header nav ul li a {
-    color: #fff;
+.nav-links li {
+    margin: 0 10px; /* Espaciado entre enlaces */
+}
+
+.nav-links a {
     text-decoration: none;
-    font-weight: bold;
-    transition: color 0.3s;
+    color: white;
+    font-size: 16px;
+    transition: color 0.3s ease;
 }
 
-header nav ul li a:hover {
-    color: #FFD700;
+.nav-links a:hover {
+    color: #c17a7a; /* Color de texto al pasar el ratón */
+}
+
+/*Estilos botones autenticacion*/
+.auth-buttons {
+    display: flex;
+    gap: 10px;
+    margin-right: 10px;
+}
+
+.auth-buttons button {
+    background-color: #868477;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+}
+
+.auth-buttons button:hover {
+    background-color: #4e4d44; /* Color al pasar el ratón */
 }
 
 main {

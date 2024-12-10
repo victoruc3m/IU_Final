@@ -1,0 +1,264 @@
+
+
+/*Estilos barra de navegacion superior*/
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #993737; 
+    padding: 0px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra */
+}
+
+/*Estilos enlaces barra*/
+.nav-links {
+    display: flex;
+    list-style: none;
+}
+
+.nav-links li {
+    margin: 0 10px; /* Espaciado entre enlaces */
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #c17a7a; /* Color de texto al pasar el ratón */
+}
+
+/*Estilos botones autenticacion*/
+.auth-buttons {
+    display: flex;
+    gap: 10px;
+    margin-right: 10px;
+}
+
+.auth-buttons button {
+    background-color: #868477;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+}
+
+.auth-buttons button:hover {
+    background-color: #4e4d44; /* Color al pasar el ratón */
+}
+
+/*Estilos elección experiencia*/
+
+
+  body {
+    font-family: Arial, sans-serif;
+    box-sizing: border-box;
+    overflow-x: hidden; /* Evitar scroll horizontal */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    margin-top: 50px;
+    flex-direction: column;
+    background: url('../resources/fondoreservas.jpg') no-repeat center center fixed;
+    background-size: cover;
+  }
+  
+  .boton-atras {
+    position: fixed;
+    top: 70px;
+    left: 20px;
+    display: inline-flex; /* Para alinear elementos en una fila */
+    align-items: center; /* Centrar verticalmente */
+  }
+  
+  .boton-atras a {
+    font-size: 25px;
+    text-decoration: none;
+    color: white;
+    display: inline-flex; /* Asegura que los elementos dentro también usen flexbox */
+    align-items: center; /* Centrar verticalmente el texto e imagen */
+  }
+  
+  .boton-atras img {
+    margin-right: 8px; /* Espacio entre la imagen y el texto */
+    height: 25px; /* Ajusta la altura de la imagen */
+  }
+
+
+  .pagina-experiencias {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    padding-top: 15px;
+  }
+
+  .pagina-experiencias h1 {
+    font-size: 2.5rem;;
+  }
+  
+  .contenido {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    border: 2px solid black;
+    border-radius: 5px;
+    padding: 20px;
+    width: 70vw;
+    height: 50vh;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  h1 {
+    margin-bottom: 20px;
+    font-size: 24px;
+  }
+  
+  .experiencia {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+  }
+  
+  .info-experiencia {
+    flex: 1;
+    text-align: left;
+    flex-direction: column;
+  }
+  
+  .seleccionar-cantidad {
+    display: flex;
+    align-items: center;
+    padding-left: 50px;
+  }
+  
+  .cantidad {
+    width: 30px;
+    height: 30px;
+    background-color: #f0f0f0;
+    border: 1px solid black;
+    font-size: 18px;
+    cursor: pointer;
+  }
+  
+  .cantidad:hover {
+    background-color: #e0e0e0;
+  }
+  
+  input {
+    width: 40px;
+    height: 30px;
+    text-align: center;
+    margin: 0 5px;
+    border: 1px solid black;
+  }
+  
+  input[readonly] {
+    background-color: #f9f9f9;
+  }
+
+  .barra-progreso{
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+  
+  .continue-btn {
+    background-color: white;
+    color: black;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    border: 2px solid black;
+    border-radius: 5px;
+    text-decoration: none;
+  }
+  
+  .continue-btn:hover {
+    background-color: #c0c0c0;
+  }
+
+
+
+  /* Estilos Pedir datos */
+.formulario {
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+  height: 100%;
+}
+
+.form-1 {
+  width: 100%;
+}
+
+.form-1 input{
+  width: 96%;
+  height: 30px;
+  margin-bottom: 40px;
+  padding: 5px;
+  border: 1px solid black;
+  background-color: #F8F8F8;
+}
+.form-3 {
+  width: 100%
+}
+
+.form-3 input{
+  width: 30%;
+  height: 30px;
+  margin-bottom: 40px;
+  padding: 5px;
+  border: 1px solid black;
+  background-color: #F8F8F8;
+
+}
+
+
+/* Estilos Informacion pago */
+.titulo-resumen {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.unidades {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.total {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.tarjeta input {
+  width: 100%;
+  height: 30px;
+  margin-bottom: 40px;
+  padding: 5px;
+  border: 1px solid black;
+  background-color: #F8F8F8;
+}
+
+
+/* Estilos Página final */
+.fin {
+  font-size: 2rem;
+}
