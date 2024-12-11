@@ -1,0 +1,112 @@
+
+
+body {
+    background-image: url('../resources/fondo1.jpg'); 
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat;
+    overflow-y: hidden;
+    height: 100vh; 
+    text-align: center;
+    color: white;
+    margin-left: 90px;
+    margin-right: 90px;
+    margin-top: 50px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+main {
+    margin-top: 70px;
+}
+
+
+h1{
+    color: black;
+    font-size: 45px;
+}
+
+p{
+    font-size: 18px;
+    color: black;
+}
+
+.distancia_cuento{
+    margin-bottom: 100px;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #993737; 
+    padding: 0px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra */
+}
+
+/*Estilos enlaces barra*/
+.nav-links {
+    display: flex;
+    list-style: none;
+}
+
+.nav-links li {
+    margin: 0 10px; /* Espaciado entre enlaces */
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #c17a7a; /* Color de texto al pasar el ratón */
+}
+
+.auth-buttons {
+    display: flex;
+    gap: 10px;
+    margin-right: 10px;
+}
+
+.auth-buttons button {
+    background-color: #868477;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+}
+
+.auth-buttons button:hover {
+    background-color: #4e4d44; /* Color al pasar el ratón */
+}
+
+.boton-atras {
+    position: fixed;
+    top: 70px;
+    left: 20px;
+    display: inline-flex; /* Para alinear elementos en una fila */
+    align-items: center; /* Centrar verticalmente */
+  }
+  
+  .boton-atras a {
+    font-size: 25px;
+    text-decoration: none;
+    color: black;
+    display: inline-flex; /* Asegura que los elementos dentro también usen flexbox */
+    align-items: center; /* Centrar verticalmente el texto e imagen */
+  }
+  
+  .boton-atras img {
+    margin-right: 8px; /* Espacio entre la imagen y el texto */
+    height: 25px; /* Ajusta la altura de la imagen */
+  }
