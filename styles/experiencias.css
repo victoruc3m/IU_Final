@@ -1,61 +1,118 @@
 
+body {
+  font-family: Arial, sans-serif;
+  box-sizing: border-box;
+  overflow-x: hidden; /* Evitar scroll horizontal */
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  margin-top: 50px;
+}
 
 /*Estilos barra de navegacion superior*/
 .navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #993737; 
-    padding: 0px;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 1000;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #993737; 
+  padding: 0px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra */
 }
 
 /*Estilos enlaces barra*/
 .nav-links {
-    display: flex;
-    list-style: none;
+  display: flex;
+  list-style: none;
 }
 
 .nav-links li {
-    margin: 0 10px; /* Espaciado entre enlaces */
+  margin: 0 10px; /* Espaciado entre enlaces */
 }
 
 .nav-links a {
-    text-decoration: none;
-    color: white;
-    font-size: 16px;
-    transition: color 0.3s ease;
+  text-decoration: none;
+  color: white;
+  font-size: 16px;
+  transition: color 0.3s ease;
 }
 
 .nav-links a:hover {
-    color: #c17a7a; /* Color de texto al pasar el ratón */
+  color: #c17a7a; /* Color de texto al pasar el ratón */
 }
 
 /*Estilos botones autenticacion*/
 .auth-buttons {
-    display: flex;
-    gap: 10px;
-    margin-right: 10px;
+  display: flex;
+  gap: 10px;
+  margin-right: 10px;
 }
 
 .auth-buttons button {
-    background-color: #868477;
-    color: white;
-    border: none;
-    padding: 8px 15px;
-    border-radius: 4px;
-    cursor: pointer;
-    font-size: 14px;
-    transition: background-color 0.3s ease;
+  background-color: #868477;
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s ease;
 }
 
 .auth-buttons button:hover {
-    background-color: #4e4d44; /* Color al pasar el ratón */
+  background-color: #4e4d44; /* Color al pasar el ratón */
+}
+
+
+.menu-perfil {
+  position: relative;
+  display: none;
+  top: 0;
+  left: -80px;
+}
+
+.menu-perfil img {
+  width:auto;
+  height:50px;
+  border-radius: 50%;
+  border: 2px solid #000;
+  transition: transform 0.2s;
+  left: px;
+}
+
+.menu-perfil:hover .desplegable {
+  display:block;
+}
+
+.desplegable {
+  display: none;
+  position: absolute;
+  top: 53px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: white;
+  z-index: 9999;
+  min-width: 200px;
+}
+
+.desplegable a {
+  text-decoration: none;
+  color: white;
+  background-color: #993737; /* Same color as header */
+  padding: 12px 16px;
+  display: block;
+  text-align: center; /* Center the text */
+  border: 2px solid white; /* White border */
+  transition: background-color 0.2s;
+}
+
+.desplegable a:hover {
+  background-color: #792929; /* Slightly lighter red on hover */
+  color: white;
 }
 
 /*Estilos elección experiencia*/

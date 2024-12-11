@@ -67,6 +67,54 @@ body {
     background-color: #4e4d44; /* Color al pasar el ratón */
 }
 
+
+.menu-perfil {
+    position: relative;
+    display: none;
+    top: 0;
+    left: -80px;
+}
+
+.menu-perfil img {
+    width:auto;
+    height:50px;
+    border-radius: 50%;
+    border: 2px solid #000;
+    transition: transform 0.2s;
+    left: px;
+}
+
+.menu-perfil:hover .desplegable {
+    display:block;
+}
+
+.desplegable {
+    display: none;
+    position: absolute;
+    top: 53px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: white;
+    z-index: 9999;
+    min-width: 200px;
+}
+
+.desplegable a {
+    text-decoration: none;
+    color: white;
+    background-color: #993737; /* Same color as header */
+    padding: 12px 16px;
+    display: block;
+    text-align: center; /* Center the text */
+    border: 2px solid white; /* White border */
+    transition: background-color 0.2s;
+}
+
+.desplegable a:hover {
+    background-color: #792929; /* Slightly lighter red on hover */
+    color: white;
+}
+
 /*Estilos Pagina principal*/
 .home {
     display: flex;
