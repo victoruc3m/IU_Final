@@ -173,3 +173,8 @@ p{
     margin-right: 8px; /* Espacio entre la imagen y el texto */
     height: 25px; /* Ajusta la altura de la imagen */
   }
+
+.nav-links a[href="cuentos.html"] {
+  color: gold;
+  font-weight: bold;
+}
