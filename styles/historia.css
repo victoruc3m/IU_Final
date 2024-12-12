@@ -4,14 +4,14 @@ body {
   background-size: cover;
   font-family: Arial, sans-serif;
   box-sizing: border-box;
-  overflow-x: hidden; /* Evitar scroll horizontal */
+  overflow-x: hidden; 
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   margin-top: 50px;
 }
 
-/*Estilos barra de navegacion superior*/
+/*Barra de navegacion*/
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -23,17 +23,17 @@ body {
   left: 0;
   width: 100%;
   z-index: 1000;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
 }
 
-/*Estilos enlaces barra*/
+
 .nav-links {
   display: flex;
   list-style: none;
 }
 
 .nav-links li {
-  margin: 0 10px; /* Espaciado entre enlaces */
+  margin: 0 10px; 
 }
 
 .nav-links a {
@@ -44,10 +44,9 @@ body {
 }
 
 .nav-links a:hover {
-  color: #c17a7a; /* Color de texto al pasar el ratón */
+  color: #c17a7a; 
 }
 
-/*Estilos botones autenticacion*/
 .auth-buttons {
   display: flex;
   gap: 10px;
@@ -66,7 +65,7 @@ body {
 }
 
 .auth-buttons button:hover {
-  background-color: #4e4d44; /* Color al pasar el ratón */
+  background-color: #4e4d44; 
 }
 
 
@@ -138,7 +137,7 @@ body {
     height: 25px; 
   }
 
-
+/*Contenido de laa seccion de la historia*/
 .info-section {
     padding: 20px;
     padding-top: 60px;
@@ -147,7 +146,6 @@ body {
     text-align: left;
 }
 
-/* Título de la sección a la izq */
 .section-title {
     font-size: 24px;
     margin-bottom: 30px;

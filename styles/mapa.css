@@ -4,14 +4,14 @@ body {
   background-size: cover;
   font-family: Arial, sans-serif;
   box-sizing: border-box;
-  overflow-x: hidden; /* Evitar scroll horizontal */
+  overflow-x: hidden; 
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   margin-top: 50px;
 }
 
-/*Estilos barra de navegacion superior*/
+/*Barra de navegacion*/
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -23,7 +23,7 @@ body {
   left: 0;
   width: 100%;
   z-index: 1000;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
 }
 
 /*Estilos enlaces barra*/
@@ -33,7 +33,7 @@ body {
 }
 
 .nav-links li {
-  margin: 0 10px; /* Espaciado entre enlaces */
+  margin: 0 10px; 
 }
 
 .nav-links a {

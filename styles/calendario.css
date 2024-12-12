@@ -12,8 +12,8 @@ body {
 }
 
 main {
-    margin-top: 20px; /* Asegura que el contenido no esté cubierto por la barra de navegación */
-    text-align: center; /* Centra todo el contenido dentro del main */
+    margin-top: 20px; 
+    text-align: center; 
     padding: 20px;
 }
 
@@ -26,6 +26,7 @@ h4{
     color: #b22222;
 }
 
+/*Diseño calendario*/
 .calendario {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
@@ -83,7 +84,7 @@ h4{
     font-weight: bold;
 }
 
-/*Estilos barra de navegacion superior*/
+/*Barra de navegacion*/
 .navbar {
     display: flex;
     justify-content: space-between;
@@ -95,17 +96,16 @@ h4{
     left: 0;
     width: 100%;
     z-index: 1000;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
 }
 
-/*Estilos enlaces barra*/
 .nav-links {
     display: flex;
     list-style: none;
 }
 
 .nav-links li {
-    margin: 0 10px; /* Espaciado entre enlaces */
+    margin: 0 10px; 
 }
 
 .nav-links a {
@@ -116,10 +116,9 @@ h4{
 }
 
 .nav-links a:hover {
-    color: #c17a7a; /* Color de texto al pasar el ratón */
+    color: #c17a7a; 
 }
 
-/*Estilos botones autenticacion*/
 .auth-buttons {
     display: flex;
     gap: 10px;
@@ -138,7 +137,7 @@ h4{
 }
 
 .auth-buttons button:hover {
-    background-color: #4e4d44; /* Color al pasar el ratón */
+    background-color: #4e4d44; 
 }
 
 
@@ -176,16 +175,16 @@ h4{
 .desplegable a {
     text-decoration: none;
     color: white;
-    background-color: #993737; /* Same color as header */
+    background-color: #993737; 
     padding: 12px 16px;
     display: block;
-    text-align: center; /* Center the text */
-    border: 2px solid white; /* White border */
+    text-align: center; 
+    border: 2px solid white; 
     transition: background-color 0.2s;
 }
 
 .desplegable a:hover {
-    background-color: #792929; /* Slightly lighter red on hover */
+    background-color: #792929; 
     color: white;
 }
 
@@ -193,20 +192,20 @@ h4{
     position: fixed;
     top: 80px;
     left: 20px;
-    display: inline-flex; /* Para alinear elementos en una fila */
-    align-items: center; /* Centrar verticalmente */
+    display: inline-flex; 
+    align-items: center; 
   }
   
   .boton-atras a {
     font-size: 25px;
     text-decoration: none;
     color: black;
-    display: inline-flex; /* Asegura que los elementos dentro también usen flexbox */
-    align-items: center; /* Centrar verticalmente el texto e imagen */
+    display: inline-flex; 
+    align-items: center; 
   }
   
   .boton-atras img {
-    margin-right: 8px; /* Espacio entre la imagen y el texto */
-    height: 25px; /* Ajusta la altura de la imagen */
+    margin-right: 8px; 
+    height: 25px; 
     width: auto;
   }

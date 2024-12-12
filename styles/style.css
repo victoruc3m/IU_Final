@@ -2,7 +2,7 @@
 body {
     font-family: Arial, sans-serif;
     box-sizing: border-box;
-    overflow-x: hidden; /* Evitar scroll horizontal */
+    overflow-x: hidden; 
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -21,7 +21,7 @@ body {
     left: 0;
     width: 100%;
     z-index: 1000;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
 }
 
 /*Estilos enlaces barra*/

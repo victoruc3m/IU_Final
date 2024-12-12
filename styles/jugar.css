@@ -7,14 +7,14 @@ body {
   padding: 0;
   font-family: Arial, sans-serif;
   box-sizing: border-box;
-  overflow-x: hidden; /* Evitar scroll horizontal */
+  overflow-x: hidden; 
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   margin-top: 50px;
 }
 
-/*Estilos barra de navegacion superior*/
+/*Barra de navegacion*/
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -26,17 +26,16 @@ body {
   left: 0;
   width: 100%;
   z-index: 1000;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
 }
 
-/*Estilos enlaces barra*/
 .nav-links {
   display: flex;
   list-style: none;
 }
 
 .nav-links li {
-  margin: 0 10px; /* Espaciado entre enlaces */
+  margin: 0 10px;
 }
 
 .nav-links a {
@@ -47,10 +46,9 @@ body {
 }
 
 .nav-links a:hover {
-  color: #c17a7a; /* Color de texto al pasar el ratón */
+  color: #c17a7a; 
 }
 
-/*Estilos botones autenticacion*/
 .auth-buttons {
   display: flex;
   gap: 10px;
@@ -69,9 +67,8 @@ body {
 }
 
 .auth-buttons button:hover {
-  background-color: #4e4d44; /* Color al pasar el ratón */
+  background-color: #4e4d44; 
 }
-
 
 .menu-perfil {
   position: relative;
@@ -247,17 +244,17 @@ body {
 }
 
 #sack-img {
-    width: 100%; /* Ajusta la imagen al tamaño del saco */
-    height: 100%; /* Ajusta la altura al tamaño del saco */
-    object-fit: cover; /* Asegura que la imagen no se distorsione */
+    width: 100%; 
+    height: 100%; 
+    object-fit: cover; 
 }
 
 .gift-in-sack {
-    position: absolute; /* Pone los regalos sobre el saco */
+    position: absolute; 
     top: 30%; 
     left: 50%; 
-    transform: translate(-50%, -50%); /* Ajusta el regalo al centro del contenedor */
-    width: 60px; /* Tamaño fijo del regalo */
+    transform: translate(-50%, -50%); 
+    width: 60px; 
     height: 60px;
     object-fit: cover; 
 }
@@ -266,7 +263,6 @@ body {
 .hidden {
     display: none;
 }
-
 
 
 footer {
