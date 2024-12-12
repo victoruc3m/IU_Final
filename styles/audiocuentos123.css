@@ -160,3 +160,9 @@ audio {
     height: 25px; /* Ajusta la altura de la imagen */
   }
 
+.nav-links a[href="cuentos.html"] {
+  color: gold;
+  font-weight: bold;
+}
+
+
