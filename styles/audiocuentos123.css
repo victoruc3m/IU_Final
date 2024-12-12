@@ -69,7 +69,7 @@ audio {
 }
 
 .auth-buttons button {
-    background-color: #868477;
+    background-color: rgb(86, 84, 84);
     color: white;
     border: none;
     padding: 8px 15px;
@@ -158,16 +158,13 @@ audio {
     margin-right: 8px; 
     height: 25px; 
   }
-<<<<<<< HEAD
-=======
+
 
 .nav-links a[href="cuentos.html"] {
   color: gold;
   font-weight: bold;
 }
 
-
->>>>>>> 7f3ef3fde9a8d969837bf835eba2cad15c9c1545
 
 /* Responsive para móviles */
 @media (max-width: 768px) {

@@ -56,7 +56,7 @@ body {
 }
 
 .auth-buttons button {
-  background-color: #868477;
+  background-color: rgb(86, 84, 84);
   color: white;
   border: none;
   padding: 8px 15px;

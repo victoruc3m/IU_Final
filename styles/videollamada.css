@@ -57,7 +57,7 @@ body {
 }
 
 .auth-buttons button {
-  background-color: #868477;
+  background-color: rgb(86, 84, 84);
   color: white;
   border: none;
   padding: 8px 15px;
@@ -178,7 +178,7 @@ body {
 }
 
 .mute-button {
-    background-color: #4caf50; /* Verde */
+    background-color:  #2d642f; /* Verde */
     color: white;
     padding: 10px 20px;
     border: none;

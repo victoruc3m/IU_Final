@@ -123,7 +123,7 @@ document.addEventListener('DOMContentLoaded', function() {
         submitButton.style.width = '250px';
         submitButton.style.margin = '20px auto';
         submitButton.style.padding = '10px';
-        submitButton.style.backgroundColor = 'red';
+        submitButton.style.backgroundColor = 'darkred';
         submitButton.style.color = 'white';
         submitButton.style.border = 'none';
         submitButton.style.borderRadius = '5px';
