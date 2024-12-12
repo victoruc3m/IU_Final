@@ -1,10 +1,7 @@
 
 body {
-  background: url('../resources/fondo1.jpg') no-repeat center;
+  background: url('../resources/carta.jpg') no-repeat center;
   background-size: cover;
-  height: 95vh;
-  margin: 0;
-  padding: 0;
   font-family: Arial, sans-serif;
   box-sizing: border-box;
   overflow-x: hidden; /* Evitar scroll horizontal */
@@ -72,7 +69,6 @@ body {
   background-color: #4e4d44; /* Color al pasar el ratón */
 }
 
-
 .menu-perfil {
   position: relative;
   display: none;
@@ -120,53 +116,6 @@ body {
   color: white;
 }
 
-/* Contenedor principal del menú y juegos */
-.juega-container_ {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 20px;
-}
-
-.juega-container {
-    display: flex;
-    gap: 20px;
-    width: 100%;
-    justify-content: center;
-}
-
-/* Menú lateral */
-.juega-menu {
-    width: 200px;
-    background-color: #993737;
-    color: white;
-    padding: 10px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-.juega-menu ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-.juega-menu li {
-    margin: 10px 0;
-    cursor: pointer;
-    padding: 10px;
-    background-color: #F5DEB3;
-    color: #800000;
-    border-radius: 5px;
-    text-align: center;
-    transition: background-color 0.3s ease;
-}
-
-.juega-menu li:hover {
-    background-color: #c7a600;
-}
-
-
   .boton-atras {
     position: fixed;
     top: 70px;
@@ -187,83 +136,79 @@ body {
     margin-right: 8px; /* Espacio entre la imagen y el texto */
     height: 25px; /* Ajusta la altura de la imagen */
   }
-
-
-
-/* Contenedor de cada juego */
-.juega-game {
-    flex-grow: 1;
-    text-align: center;
-    padding: 20px;
-    background-color: #F5DEB3;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    min-width: 300px;
-	max-width: 800px;
-	color: #800000;
-	border: 3px solid #800000;
-}
-
-/* Estilo del tablero del Tres en Raya */
-#tic-tac-toe {
-    display: grid;
-    grid-template-columns: repeat(3, 100px);
-    grid-gap: 10px;
-    margin: 20px auto;
+  
+.image-center {
+    display: flex;
     justify-content: center;
     align-items: center;
+    height: 100vh; /* Centra verticalmente ocupando toda la pantalla */
+	margin-top: 20px;
+	margin-bottom: 50px;
 }
 
-#drag-and-drop {
-    display: grid;
-    grid-template-columns: repeat(3, 100px);
-    grid-gap: 10px;
-    margin: 20px auto;
-    justify-content: center;
-    align-items: center;
+.image-center img {
+    max-width: 75%; /* La imagen ocupará el 50% del ancho del contenedor */
+    height: auto; /* Mantiene las proporciones de la imagen */
+
 }
 
-.gift {
-    width: 100px;
-    height: 100px;
-    cursor: grab;
-    object-fit: cover; /* Mantiene las proporciones de la imagen */
-    position: relative; /* Evita movimiento inesperado */
-}
-
-
-.gift:active {
-    cursor: grabbing; /* Cambia el cursor al arrastrar */
-}
-
-#sack {
-    width: 200px; /* Ancho del saco */
-    height: 300px; /* Altura del saco */
-    border: 2px dashed #000; /* Borde visible para referencia */
-    position: relative; /* Base para posicionar elementos en su interior */
-    margin: 20px auto; /* Centra el saco horizontalmente */
-    background-color: #f9f9f9; /* Fondo opcional */
-}
-
-#sack-img {
-    width: 100%; /* Ajusta la imagen al tamaño del saco */
-    height: 100%; /* Ajusta la altura al tamaño del saco */
-    object-fit: cover; /* Asegura que la imagen no se distorsione */
-}
-
-.gift-in-sack {
-    position: absolute; /* Apila los regalos sobre el saco */
-    top: 30%; /* Ajusta esta posición según tu diseño */
-    left: 50%; /* Centra horizontalmente */
-    transform: translate(-50%, -50%); /* Ajusta el regalo al centro del contenedor */
-    width: 60px; /* Tamaño fijo del regalo */
-    height: 60px;
-    object-fit: cover; /* Mantiene las proporciones de la imagen */
+.map-title {
+    text-align: center; /* Centrar el texto */
+    font-size: 1.8em; /* Ajusta el tamaño de la fuente */
+    color: #993737; /* Color rojo oscuro */
+    margin: 0; /* Elimina cualquier margen, tanto superior como inferior */
+    font-weight: bold; /* Texto más destacado */
+    font-family: 'Arial', sans-serif; /* Fuente consistente */
+	margin-top: 90px;
 }
 
 
-.hidden {
-    display: none;
+/* Contenedor del mapa */
+.map-container {
+    position: relative;
+    width: 100%; /* Ajusta el tamaño del mapa */
+    margin: 0 auto; /* Centrado horizontal */
+}
+
+/* Imagen del mapa */
+.map-image {
+    width: 150%;
+    display: block;
+	border: 5px solid #993737; /* Marco con grosor, color rojo oscuro */
+    border-radius: 10px; /* Esquinas redondeadas, opcional */
+}
+
+/* Tooltip oculto inicialmente */
+.tooltip {
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.8); /* Fondo oscuro semitransparente */
+    color: #fff;
+    padding: 8px 12px;
+    border-radius: 8px;
+    font-size: 0.9em;
+    display: none; /* Oculto por defecto */
+    white-space: nowrap;
+    pointer-events: none; /* Evita interferencia con el ratón */
+    z-index: 10;
+}
+
+/* Mostrar el tooltip al hacer hover en el área */
+.map-area:hover .tooltip {
+    display: block;
+}
+
+/* Áreas interactivas */
+.map-area {
+    position: absolute;
+    background-color: transparent; /* Invisible pero funcional */
+    pointer-events: all;
+    cursor: pointer;
+}
+
+
+/* Mostrar el tooltip al hacer hover en el área */
+.map-area:hover + .tooltip {
+    display: block;
 }
 
 
@@ -280,3 +225,5 @@ footer p {
     color: #fff;
     font-size: 0.9em;
 }
+
+

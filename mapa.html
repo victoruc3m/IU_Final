@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NavidApp - Mapa</title>
+    <link rel="stylesheet" href="styles/mapa.css">
+	<script src="scripts/script.js"></script>
+	<script src="scripts/mapa.js"></script>
+</head>
+
+<body>
+  <header>
+    <nav class="navbar">
+        <ul class="nav-links">
+            <li><a href="home.html">Inicio</a></li>
+            <li><a href="mapa.html">Mapa</a></li>
+            <li><a href="historia.html">Historia</a></li>
+            <li><a href="cartas.html">Carta</a></li>
+            <li><a href="videollamada.html">Videollamada</a></li>
+            <li><a href="cuentos.html">Cuentos</a></li>
+            <li><a href="jugar.html">Jugar</a></li>
+            <li><a href="experiencia.html">Experiencia</a></li>
+        </ul>
+        <div class="auth-buttons" id="auth-buttons">
+            <button class="login-btn" id="login-btn">Iniciar Sesión</button>
+            <button class="register-btn">Registrarse</button>
+        </div>
+        <div class="menu-perfil" id="menu-perfil">
+            <img src="./resources/perfil.png" alt="foto-perfil">
+            <div class="desplegable" id="desplegable">
+                <a id="mi-perfil">Mi Perfil</a>
+                <a id="mis-experiencias">Mis Experiencias</a>
+                <a id="mis-cartas">Mis Cartas</a>
+                <a id="cerrar-sesion">Cerrar Sesión</a>
+            </div>
+        </div>
+    </nav>
+</header>
+
+    <!-- Botón para regresar -->
+    <div class="pagina-mapa">
+        <div class="boton-atras">
+            <a href="home.html">
+                <img src="resources/back.png" alt="flecha atrás">
+                Página Principal
+            </a>
+        </div>
+    </div>
+
+  <!-- Mapa interactivo -->
+<div class="map-container">
+	<h2 class="map-title">Explora las tradiciones navideñas alrededor del mundo</h2>
+    <div class="image-center">
+        <img src="resources/mapa.png" alt="Mapa del mundo" class="map-image">
+    </div>
+
+    <!-- Áreas interactivas con sus respectivos tooltips -->
+    <div class="map-area" style="top: 51%; left: 45%; width: 6%; height: 6%;">
+        <div class="tooltip">España: El 6 de enero, los Reyes Magos traen regalos, y las familias disfrutan del Roscón de Reyes.</div>
+    </div>
+    <div class="map-area" style="top: 50%; left: 25%; width: 8%; height: 8%;">
+        <div class="tooltip">Estados Unidos: Santa Claus llena los calcetines, y las familias decoran árboles y cantan villancicos.</div>
+    </div>
+    <div class="map-area" style="top: 41%; left: 25%; width: 8%; height: 8%;">
+        <div class="tooltip">Canadá: En Quebec se celebra la 'Fête des Rois' con pasteles y festivales de luces.</div>
+    </div>
+    <div class="map-area" style="top: 58%; left: 25%; width: 8%; height: 8%;">
+        <div class="tooltip">México: Las Posadas incluyen procesiones, piñatas, tamales y atole.</div>
+    </div>
+    <div class="map-area" style="top: 73%; left: 36%; width: 8%; height: 8%;">
+        <div class="tooltip">Brasil: La Misa del Gallo y una cena con pavo y arroz con pasas son tradición.</div>
+    </div>
+    <div class="map-area" style="top: 86%; left: 30%; width: 8%; height: 8%;">
+        <div class="tooltip">Argentina: Las familias celebran con asados y fuegos artificiales a la medianoche.</div>
+    </div>
+    <div class="map-area" style="top: 32%; left: 59%; width: 9%; height: 9%;">
+        <div class="tooltip">Rusia: Ded Moroz trae regalos durante las cenas de Nochevieja con su nieta Snegurochka.</div>
+    </div>
+    <div class="map-area" style="top: 53%; left: 64%; width: 9%; height: 9%;">
+        <div class="tooltip">China: Árboles de Navidad decorados en rojo y dorado simbolizan suerte y felicidad.</div>
+    </div>
+    <div class="map-area" style="top: 15%; left: 33%; width: 8%; height: 8%;">
+        <div class="tooltip">Groenlandia: Es común intercambiar regalos hechos a mano y celebrar con platos tradicionales como carne de reno o foca.</div>
+    </div>
+    <div class="map-area" style="top: 63%; left: 48%; width: 12%; height: 12%;">
+        <div class="tooltip">África: Las celebraciones incluyen villancicos y comidas comunitarias al aire libre.</div>
+    </div>
+</div>
+
+
+
+    <!-- Pie de página -->
+    <footer>
+        <p>© 2024 NavidApp</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

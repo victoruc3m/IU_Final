@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,38 +5,94 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NavidApp - Jugar</title>
     <link rel="stylesheet" href="styles/jugar.css">
+	<script src="scripts/script.js"></script>
+	<script src="scripts/jugar.js"></script>
 </head>
+
 <body>
-    <header>
-        <nav class="navbar">
-            <ul class="nav-links">
-                <li><a href="home.html">Inicio</a></li>
-                <li><a href="mapa.html">Mapa</a></li>
-                <li><a href="historia.html">Historia</a></li>
-                <li><a href="cartas.html">Carta</a></li>
-                <li><a href="videollamada.html">Videollamada</a></li>
-                <li><a href="cuentos.html">Cuentos</a></li>
-                <li><a href="jugar.html">Jugar</a></li>
-                <li><a href="experiencia.html">Experiencia</a></li>
-            </ul>
-            <div class="auth-buttons">
-                <button class="login-btn">Iniciar Sesión</button>
-                <button class="register-btn">Registrarse</button>
+  <header>
+    <nav class="navbar">
+        <ul class="nav-links">
+            <li><a href="home.html">Inicio</a></li>
+            <li><a href="mapa.html">Mapa</a></li>
+            <li><a href="historia.html">Historia</a></li>
+            <li><a href="cartas.html">Carta</a></li>
+            <li><a href="videollamada.html">Videollamada</a></li>
+            <li><a href="cuentos.html">Cuentos</a></li>
+            <li><a href="jugar.html">Jugar</a></li>
+            <li><a href="experiencia.html">Experiencia</a></li>
+        </ul>
+        <div class="auth-buttons" id="auth-buttons">
+            <button class="login-btn" id="login-btn">Iniciar Sesión</button>
+            <button class="register-btn">Registrarse</button>
+        </div>
+        <div class="menu-perfil" id="menu-perfil">
+            <img src="./resources/perfil.png" alt="foto-perfil">
+            <div class="desplegable" id="desplegable">
+                <a id="mi-perfil">Mi Perfil</a>
+                <a id="mis-experiencias">Mis Experiencias</a>
+                <a id="mis-cartas">Mis Cartas</a>
+                <a id="cerrar-sesion">Cerrar Sesión</a>
             </div>
-        </nav>
-    </header>
+        </div>
+    </nav>
+</header>
+
     <main>
-        <section id="game-section">
-            <h1>Tres en Raya Navideño</h1>
-            <div id="tic-tac-toe">
-                <!-- El tablero será generado dinámicamente -->
-            </div>
-            <p id="game-status">Turno del jugador: <span id="current-player">X</span></p>
+        <!-- Sección Juega -->
+        <section id="juega">
+            <div class="juega-container_">
+			<div class="boton-atras">
+          <a href="home.html">
+            <img src="resources/back.png" alt="flecha atras">
+            Página Principal
+          </a>
+          
+        </div>
+                <h2>¡Juega!</h2>
+                <div class="juega-container">
+    <!-- Menú lateral para seleccionar juegos -->
+    <div class="juega-menu">
+        <nav>
+            <ul>
+                <li id="juego1" onclick="startGame('game1')">Juego 1: Tres en Raya</li>
+                <li id="juego2" onclick="startGame('game2')">Juego 2: Llena el Saco</li>
+            </ul>
+        </nav>
+    </div>
+
+    <!-- Contenedor del primer juego -->
+    <div class="juega-game" id="game1" style="display: block;">
+        <h1>🎅🏼 Tres en Raya 🎅🏼</h1>
+        <div id="tic-tac-toe"></div>
+        <p id="game-status">Turno del jugador: <span id="current-player">X</span></p>
+    </div>
+
+    <!-- Contenedor del segundo juego -->
+    <div class="juega-game" id="game2" style="display: none;">
+        <h1>🎅🏼 Llena el saco 🎅🏼</h1>
+        <div class="game-container">
+            <!-- Regalos -->
+            <img src="resources/gift.png" alt="Regalo 1" class="gift" draggable="true" id="gift1">
+            <img src="resources/gift.png" alt="Regalo 2" class="gift" draggable="true" id="gift2">
+            <img src="resources/gift.png" alt="Regalo 3" class="gift" draggable="true" id="gift3">
+            <img src="resources/gift.png" alt="Regalo 4" class="gift" draggable="true" id="gift4">
+            <img src="resources/gift.png" alt="Regalo 5" class="gift" draggable="true" id="gift5">
+            <img src="resources/gift.png" alt="Regalo 6" class="gift" draggable="true" id="gift6">
+        </div>
+
+        <!-- Saco -->
+        <div id="sack">
+            <img src="resources/sack.png" alt="Saco de regalos" id="sack-img">
+            <p>Arrastra los regalos aquí</p>
+        </div>
+    </div>
+</div>
+
         </section>
     </main>
+
     <footer>
         <p>© 2024 NavidApp</p>
     </footer>
-    <script src="scripts/jugar.js"></script>
-</body>
-</html>
+

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CALENDARIO DE ADVIENTO</title>
+    <link rel="stylesheet" href="styles/calendario.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <ul class="nav-links">
+                <li><a href="home.html">Inicio</a></li>
+                <li><a href="mapa.html">Mapa</a></li>
+                <li><a href="historia.html">Historia</a></li>
+                <li><a href="cartas.html">Carta</a></li>
+                <li><a href="videollamada.html">Videollamada</a></li>
+                <li><a href="cuentos.html">Cuentos</a></li>
+                <li><a href="jugar.html">Jugar</a></li>
+                <li><a href="experiencia.html">Experiencia</a></li>
+                <li><a href="calendario.html">Calendario de Adviento</a></li>
+            </ul>
+            <div class="auth-buttons">
+                <button class="login-btn">Iniciar Sesión</button>
+                <button class="register-btn">Registrarse</button>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div class="boton-atras">
+            <a href="home.html">
+              <img src="resources/back.png" alt="flecha atras">
+              Página Principal
+            </a>
+        </div>
+        <h1>CALENDARIO DE ADVIENTO</h1>
+        <h4>Ve abriendo una casilla por día y podrás ver las sorpresas que hay detrás de ellas.</h4>
+        <div class="calendario">
+            <div class="dia" onclick="abrirPopup(1)">1</div>
+            <div class="dia" onclick="abrirPopup(2)">2</div>
+            <div class="dia" onclick="abrirPopup(3)">3</div>
+            <div class="dia" onclick="abrirPopup(4)">4</div>
+            <div class="dia" onclick="abrirPopup(5)">5</div>
+            <div class="dia" onclick="abrirPopup(6)">6</div>
+            <div class="dia" onclick="abrirPopup(7)">7</div>
+            <div class="dia" onclick="abrirPopup(8)">8</div>
+            <div class="dia" onclick="abrirPopup(9)">9</div>
+            <div class="dia" onclick="abrirPopup(10)">10</div>
+            <div class="dia" onclick="abrirPopup(11)">11</div>
+            <div class="dia" onclick="abrirPopup(12)">12</div>
+            <div class="dia" onclick="abrirPopup(13)">13</div>
+            <div class="dia" onclick="abrirPopup(14)">14</div>
+            <div class="dia" onclick="abrirPopup(15)">15</div>
+            <div class="dia" onclick="abrirPopup(16)">16</div>
+            <div class="dia" onclick="abrirPopup(17)">17</div>
+            <div class="dia" onclick="abrirPopup(18)">18</div>
+            <div class="dia" onclick="abrirPopup(19)">19</div>
+            <div class="dia" onclick="abrirPopup(20)">20</div>
+            <div class="dia" onclick="abrirPopup(21)">21</div>
+            <div class="dia" onclick="abrirPopup(22)">22</div>
+            <div class="dia" onclick="abrirPopup(23)">23</div>
+            <div class="dia" onclick="abrirPopup(24)">24</div>
+        </div>
+
+        <div id="popup" class="popup">
+            <div class="popup-content">
+                <span class="close" onclick="cerrarPopup()">&times;</span>
+                <p id="popup-message"></p>
+                <img id="popup-image" src="" alt="Sorpresa de Adviento" style="display:none; max-width: 100%; height: auto; margin-top: 10px;">
+                <a id="popup-link" href="#" target="_blank" style="display:none; margin-top: 10px; font-size: 16px; text-decoration: underline; color: #b22222;">Ir al enlace</a>
+            </div>
+        </div>
+
+        <script src="scripts/calendario.js"></script>
+    </main>
+</body>
+</html>
