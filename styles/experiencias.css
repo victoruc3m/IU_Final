@@ -2,14 +2,14 @@
 body {
   font-family: Arial, sans-serif;
   box-sizing: border-box;
-  overflow-x: hidden; 
+  overflow-x: hidden;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   margin-top: 50px;
 }
 
-/*Barra de navegacion*/
+/* barra de navegacion superior*/
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -21,17 +21,17 @@ body {
   left: 0;
   width: 100%;
   z-index: 1000;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-
+/* enlaces barra*/
 .nav-links {
   display: flex;
   list-style: none;
 }
 
 .nav-links li {
-  margin: 0 10px;
+  margin: 0 10px; 
 }
 
 .nav-links a {
@@ -45,7 +45,7 @@ body {
   color: #c17a7a; 
 }
 
-
+/* botones autenticacion*/
 .auth-buttons {
   display: flex;
   gap: 10px;
@@ -115,19 +115,9 @@ body {
   color: white;
 }
 
-<<<<<<< HEAD
-/*Contenido experiencia*/
-=======
-.nav-links a[href="experiencia.html"] {
-  color: gold;
-  font-weight: bold;
-}
-
-
 /*Estilos elección experiencia*/
 
 
->>>>>>> 7f3ef3fde9a8d969837bf835eba2cad15c9c1545
   body {
     font-family: Arial, sans-serif;
     box-sizing: border-box;
@@ -153,7 +143,7 @@ body {
     font-size: 25px;
     text-decoration: none;
     color: white;
-    display: inline-flex; 
+    display: inline-flex;
     align-items: center; 
   }
   
@@ -330,4 +320,16 @@ body {
   font-size: 2rem;
 }
 
+footer {
+    margin-top: 20px;
+    text-align: center;
+    background: #993737;
+    padding: 10px 0;
+}
+
+footer p {
+    margin: 0;
+    color: #fff;
+    font-size: 0.9em;
+}
 
