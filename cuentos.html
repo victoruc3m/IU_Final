@@ -5,13 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NavidApp - Cuentos</title>
     <link rel="stylesheet" href="styles/cuentos.css">
+    <script src="scripts/script.js"></script>
 </head>
 
 <body>
     <header>
         <nav class="navbar">
             <ul class="nav-links">
-                <li><a href="home.html">Inicio prueba</a></li>
+                <li><a href="home.html">Inicio</a></li>
                 <li><a href="mapa.html">Mapa</a></li>
                 <li><a href="historia.html">Historia</a></li>
                 <li><a href="cartas.html">Carta</a></li>
@@ -20,18 +21,27 @@
                 <li><a href="jugar.html">Jugar</a></li>
                 <li><a href="experiencia.html">Experiencia</a></li>
             </ul>
-            <div class="auth-buttons">
-                <button class="login-btn">Iniciar Sesión</button>
+            <div class="auth-buttons" id="auth-buttons">
+                <button class="login-btn" id="login-btn">Iniciar Sesión</button>
                 <button class="register-btn">Registrarse</button>
+            </div>
+            <div class="menu-perfil" id="menu-perfil">
+                <img src="./resources/perfil.png" alt="foto-perfil">
+                <div class="desplegable" id="desplegable">
+                    <a id="mi-perfil">Mi Perfil</a>
+                    <a id="mis-experiencias">Mis Experiencias</a>
+                    <a id="mis-cartas">Mis Cartas</a>
+                    <a id="cerrar-sesion">Cerrar Sesión</a>
+                </div>
             </div>
         </nav>
     </header>
     <main>
         <div class="boton-atras">
             <a href="home.html">
-              <img src="resources/back.png" alt="flecha atras">
-              Página Principal
-            </a>
+                <img src="resources/back.png" alt="flecha atras">
+                Página principal
+              </a>
             
           </div>
         <h1>CUENTOS</h1>

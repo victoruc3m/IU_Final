@@ -7,6 +7,24 @@ document.addEventListener('DOMContentLoaded', function() {
     const miPerfilBtn = document.getElementById('mi-perfil');
     const body = document.body;
 
+    //Para que el perfil se muestre cuando se esta registrado (no funcionaba entre paginas)
+    function verUsuario() {
+        const authButtons = document.getElementById('auth-buttons');
+        const menuPerfil = document.getElementById('menu-perfil');
+        const cookieValue = getCookie('currentUser');
+        if (cookieValue) {
+            authButtons.style.display = 'none';
+            menuPerfil.style.display = 'flex';
+        } else {
+            authButtons.style.display = 'flex';
+            menuPerfil.style.display = 'none';
+        }
+    }
+
+    verUsuario();
+
+
+
     // Add CSS styles dynamically
     const style = document.createElement('style');
     style.textContent = `

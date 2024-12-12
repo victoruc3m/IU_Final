@@ -4,35 +4,66 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Papá Noel</title>
-    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/cartas.css">
+    <script src="scripts/cartas.js"></script>
+    <script src="scripts/script.js"></script>
+
+
 </head>
 
 <body>
-    <body>
-        <header>
-            <nav class="navbar">
-                <ul class="nav-links">
-                    <li><a href="home.html">Inicio</a></li>
-                    <li><a href="mapa.html">Mapa</a></li>
-                    <li><a href="historia.html">Historia</a></li>
-                    <li><a href="cartas.html">Carta</a></li>
-                    <li><a href="videollamada.html">Videollamada</a></li>
-                    <li><a href="cuentos.html">Cuentos</a></li>
-                    <li><a href="jugar.html">Jugar</a></li>
-                    <li><a href="experiencia.html">Experiencia</a></li>
-                </ul>
-                <div class="auth-buttons">
-                    <button class="login-btn">Iniciar Sesión</button>
-                    <button class="register-btn">Registrarse</button>
+
+    <header>
+        <nav class="navbar">
+            <ul class="nav-links">
+                <li><a href="home.html">Inicio</a></li>
+                <li><a href="mapa.html">Mapa</a></li>
+                <li><a href="historia.html">Historia</a></li>
+                <li><a href="cartas.html">Carta</a></li>
+                <li><a href="videollamada.html">Videollamada</a></li>
+                <li><a href="cuentos.html">Cuentos</a></li>
+                <li><a href="jugar.html">Jugar</a></li>
+                <li><a href="experiencia.html">Experiencia</a></li>
+            </ul>
+            <div class="auth-buttons" id="auth-buttons">
+                <button class="login-btn" id="login-btn">Iniciar Sesión</button>
+                <button class="register-btn">Registrarse</button>
+            </div>
+            <div class="menu-perfil" id="menu-perfil">
+                <img src="./resources/perfil.png" alt="foto-perfil">
+                <div class="desplegable" id="desplegable">
+                    <a id="mi-perfil">Mi Perfil</a>
+                    <a id="mis-experiencias">Mis Experiencias</a>
+                    <a id="mis-cartas">Mis Cartas</a>
+                    <a id="cerrar-sesion">Cerrar Sesión</a>
                 </div>
-            </nav>
-        </header>
+            </div>
+        </nav>
+    </header>
+
     <main>
         <div class="cartas">
-            <div class="titulo">AAAAAAAAAAAAAAAAAAAAAAAAAA</div>
-            
+            <h1>Enviar Carta a Papá Noel</h1>
+            <form id="carta-form">
+                <div class="carta-fila">
+                    <label for="nombre">Nombre:</label>
+                    <input type="text" id="nombre" name="nombre" required>
+                </div>
+                <div class="carta-fila">
+                    <label for="email">Correo Electrónico:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="carta-fila">
+                    <label for="asunto">Asunto:</label>
+                    <input type="text" id="asunto" name="asunto" required>
+                </div>
+                <div class="carta-fila">
+                    <label for="mensaje">Mensaje:</label>
+                    <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
+                </div>
+                <button type="submit">Enviar</button>
+            </form>
         </div>
-
     </main>
     <footer>
         <p>Pie de página</p>

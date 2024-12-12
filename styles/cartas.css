@@ -1,48 +1,5 @@
 
-h1{
-    font-size: 45px;
-    margin-bottom: 10px;
-}
 
-h3{
-    font-size: 30px;
-}
-
-main{
-    margin-top: 50px;
-}
-
-body {
-    font-family: Arial, Helvetica, sans-serif;
-    text-align: center;
-    color: white;
-    overflow-y: hidden;
-    background-image: url('../resources/fondo3.png'); 
-    background-size: cover; 
-    background-position: center; 
-}
-
-.fila {
-    display: flex;
-    justify-content: center;
-    gap: 120px; 
-    margin-bottom: 20px; 
-}
-
-.cuento, .audiocuento {
-    text-align: center;
-}
-
-a img {
-    width: 100px; 
-    height: auto;
-    transition: transform 0.3s, box-shadow 0.3s; 
-}
-
-a img:hover {
-    transform: scale(1.1); /* Aumenta ligeramente el tamaño al pasar el cursor */
-
-}
 /*Estilos barra de navegacion superior*/
 .navbar {
     display: flex;
@@ -149,24 +106,106 @@ a img:hover {
     color: white;
 }
 
-.boton-atras {
-    position: fixed;
-    top: 70px;
-    left: 20px;
-    display: inline-flex; /* Para alinear elementos en una fila */
-    align-items: center; /* Centrar verticalmente */
-  }
-  
-  .boton-atras a {
-    font-size: 25px;
-    text-decoration: none;
+
+/*Estilos Pagina principal*/
+
+body {
+    font-family: Arial, sans-serif;
+    box-sizing: border-box;
+    overflow-x: hidden; /* Evitar scroll horizontal */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    margin-top: 50px;
+}
+
+.cartas {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    text-align: center;
+    background: url('../resources/principal.jpg') no-repeat center;
+    background-size: cover;
+    height: 95vh;
+}
+
+
+.cartas h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    width: 50vw;
+}
+
+.carta-fila {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+    width: 40vw;
+}
+
+.carta-fila label {
+    margin-bottom: 5px;
+}
+
+.carta-fila input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.carta-fila textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button[type="submit"] {
+    background-color: #4CAF50;
     color: white;
-    display: inline-flex; /* Asegura que los elementos dentro también usen flexbox */
-    align-items: center; /* Centrar verticalmente el texto e imagen */
-  }
-  
-  .boton-atras img {
-    margin-right: 8px; /* Espacio entre la imagen y el texto */
-    height: 25px; /* Ajusta la altura de la imagen */
-    width: auto;
-  }
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    display: block;
+    width: 100%;
+    margin-top: 20px;
+}
+
+button[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+/* Desktop view */
+@media (min-width: 768px) {
+    .carta-fila {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .carta-fila label {
+        width: 150px;
+        margin-bottom: 0;
+        margin-right: 10px;
+        text-align: right;
+    }
+
+    .carta-fila input,
+    .carta-fila textarea {
+        flex: 1;
+    }
+}
+
+/* Mobile view */
+@media (max-width: 767px) {
+    .carta-fila {
+        flex-direction: column;
+    }
+
+    .carta-fila label {
+        width: 100%;
+        text-align: left;
+    }
+}
