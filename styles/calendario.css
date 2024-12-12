@@ -210,3 +210,9 @@ h4{
     height: 25px; /* Ajusta la altura de la imagen */
     width: auto;
   }
+
+.nav-links a[href="calendario.html"] {
+  color: gold;
+  font-weight: bold;
+}
+
