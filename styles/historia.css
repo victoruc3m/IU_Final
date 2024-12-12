@@ -138,6 +138,10 @@ body {
     height: 25px; 
   }
 
+.nav-links a[href="historia.html"] {
+  color: gold;
+  font-weight: bold;
+}
 
 .info-section {
     padding: 20px;
