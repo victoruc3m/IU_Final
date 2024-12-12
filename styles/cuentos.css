@@ -170,3 +170,9 @@ a img:hover {
     height: 25px; /* Ajusta la altura de la imagen */
     width: auto;
   }
+
+.nav-links a[href="cuentos.html"] {
+  color: gold;
+  font-weight: bold;
+}
+
