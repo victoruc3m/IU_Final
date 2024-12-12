@@ -1,35 +1,35 @@
 let currentPlayer = 'X';
-let cells = []; // Hacerlo accesible globalmente
+let cells = [];
 let gameActive = true;
 let dragAndDropInitialized = false; // Control para inicializar Drag and Drop una sola vez
 
 function startGame(gameId) {
-    // Ocultar todos los juegos
+    // oculto los juegos
     const games = document.querySelectorAll('.juega-game');
     games.forEach(game => game.style.display = 'none');
 
-    // Mostrar solo el juego seleccionado
+    // muestro solo el juego seleccionado
     const selectedGame = document.getElementById(gameId);
     if (selectedGame) {
         selectedGame.style.display = 'block';
     }
 
-    // Reiniciar el juego correspondiente
+    // reinicio el juego 
     if (gameId === 'game1') {
-        resetTresEnRaya(); // Reinicia el Tres en Raya
+        resetTresEnRaya(); 
     } else if (gameId === 'game2') {
-        resetDragAndDrop(); // Reinicia el juego de Drag and Drop
+        resetDragAndDrop(); 
     }
 }
 
-// Reinicia el tablero del Tres en Raya
+// reinicio el tablero del tres en raya
 function resetTresEnRaya() {
     const board = document.getElementById("tic-tac-toe");
-    board.innerHTML = ""; // Limpia el tablero actual
+    board.innerHTML = ""; // limpia el tablero 
     document.getElementById("game-status").textContent = "Turno del jugador: X";
 
-    cells = []; // Reinicia el array de celdas
-    gameActive = true; // Reactiva el juego
+    cells = []; // reinicia el array de celdas
+    gameActive = true; // reactiva el juego
 
     for (let i = 0; i < 9; i++) {
         const cell = document.createElement("div");
@@ -48,7 +48,7 @@ function resetTresEnRaya() {
     }
 }
 
-// Turno del jugador
+// turno jugador
 function makeMove(cell, index) {
     if (!gameActive || cell.textContent !== '') return;
 
@@ -67,11 +67,10 @@ function makeMove(cell, index) {
         return;
     }
 
-    // Turno del sistema
+    // turno del sistema
     setTimeout(systemMove, 500);
 }
 
-// Turno del sistema
 function systemMove() {
     if (!gameActive) return;
 
@@ -94,7 +93,7 @@ function systemMove() {
     }
 }
 
-// Verificar si hay ganador
+// ver ganador
 function checkWinner(player) {
     const winningCombinations = [
         [0, 1, 2],
@@ -112,33 +111,33 @@ function checkWinner(player) {
     });
 }
 
-// Reinicia el juego de Drag and Drop
+
 function resetDragAndDrop() {
-    // Restaura los regalos visibles
+
     const gifts = document.querySelectorAll('.gift');
     gifts.forEach(gift => {
-        gift.classList.remove('hidden'); // Hacer visibles los regalos
+        gift.classList.remove('hidden'); // hacer visibles los regalos
     });
 
-    // Limpia el contenido del saco
+
     const sack = document.getElementById('sack');
     sack.innerHTML = `
         <img src="resources/sack.png" alt="Saco de regalos" id="sack-img">
         <p>Arrastra los regalos aquí</p>
     `;
 
-    // Inicializa el Drag and Drop (si aún no se ha hecho)
+
     initializeDragAndDrop();
 }
 
-// Inicializa el juego de Drag and Drop
+
 function initializeDragAndDrop() {
-    if (dragAndDropInitialized) return; // Evita inicialización duplicada
+    if (dragAndDropInitialized) return; 
 
     const gifts = document.querySelectorAll('.gift');
     const sack = document.getElementById('sack');
 
-    // Añadir eventos Drag and Drop a cada regalo
+
     gifts.forEach(gift => {
         gift.addEventListener('dragstart', dragStart);
     });
@@ -151,39 +150,39 @@ function initializeDragAndDrop() {
     }
 
     function dragOver(event) {
-        event.preventDefault(); // Permitir que el saco sea un área de drop
+        event.preventDefault(); // permitir que el saco sea drop
     }
 
     function drop(event) {
     event.preventDefault();
 
-    // Obtener el ID del regalo arrastrado
+
     const giftId = event.dataTransfer.getData('text');
     const gift = document.getElementById(giftId);
 
-    // Verificar si el regalo existe antes de hacer algo
+
     if (gift) {
-        // Ocultar el regalo original
+        // ocultar el regalo original
         gift.classList.add('hidden');
 
-        // Crear un clon y añadirlo al saco
+        // añadirlo al saco
         const clonedGift = document.createElement('img');
         clonedGift.src = gift.src;
         clonedGift.alt = gift.alt;
-        clonedGift.classList.add('gift-in-sack'); // Clase para posicionarlo sobre el saco
+        clonedGift.classList.add('gift-in-sack'); 
         const sack = document.getElementById('sack');
         sack.appendChild(clonedGift);
     }
 
-    // Verificar si todos los regalos han sido arrastrados
+    // ver si todos los regalos han sido arrastrados
     if (document.querySelectorAll('.gift:not(.hidden)').length === 0) {
         alert('¡Felicidades! ¡El saco de Papá Noel está preparado!');
     }
 }
 
 
-    dragAndDropInitialized = true; // Marca como inicializado
+    dragAndDropInitialized = true; 
 }
 
-// Inicializar el Tres en Raya al cargar la página
+
 document.addEventListener("DOMContentLoaded", resetTresEnRaya);
