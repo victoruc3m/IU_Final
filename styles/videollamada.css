@@ -1,0 +1,183 @@
+body {
+  background: url('../resources/fondo1.jpg') no-repeat center;
+  background-size: cover;
+  height: 95vh;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  box-sizing: border-box;
+  overflow-x: hidden; /* Evitar scroll horizontal */
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  margin-top: 50px;
+}
+
+/*Estilos barra de navegacion superior*/
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #993737; 
+  padding: 0px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra */
+}
+
+/*Estilos enlaces barra*/
+.nav-links {
+  display: flex;
+  list-style: none;
+}
+
+.nav-links li {
+  margin: 0 10px; /* Espaciado entre enlaces */
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: white;
+  font-size: 16px;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #c17a7a; /* Color de texto al pasar el ratón */
+}
+
+/*Estilos botones autenticacion*/
+.auth-buttons {
+  display: flex;
+  gap: 10px;
+  margin-right: 10px;
+}
+
+.auth-buttons button {
+  background-color: #868477;
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s ease;
+}
+
+.auth-buttons button:hover {
+  background-color: #4e4d44; /* Color al pasar el ratón */
+}
+
+
+.menu-perfil {
+  position: relative;
+  display: none;
+  top: 0;
+  left: -80px;
+}
+
+.menu-perfil img {
+  width:auto;
+  height:50px;
+  border-radius: 50%;
+  border: 2px solid #000;
+  transition: transform 0.2s;
+  left: px;
+}
+
+.menu-perfil:hover .desplegable {
+  display:block;
+}
+
+.desplegable {
+  display: none;
+  position: absolute;
+  top: 53px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: white;
+  z-index: 9999;
+  min-width: 200px;
+}
+
+.desplegable a {
+  text-decoration: none;
+  color: white;
+  background-color: #993737; /* Same color as header */
+  padding: 12px 16px;
+  display: block;
+  text-align: center; /* Center the text */
+  border: 2px solid white; /* White border */
+  transition: background-color 0.2s;
+}
+
+.desplegable a:hover {
+  background-color: #792929; /* Slightly lighter red on hover */
+  color: white;
+}
+
+
+.video-container {
+    text-align: center; /* Centrar el texto */
+    font-size: 1.5em; /* Ajusta el tamaño de la fuente */
+    color: #993737; /* Color rojo oscuro */
+    margin: 50px auto; /* Añade margen superior e inferior */
+	margin-top: 90px;
+}
+
+#papa-noel-video {
+    border: 5px solid #993737; /* Marco alrededor del video */
+    border-radius: 10px; /* Bordes redondeados */
+    max-width: 100%; /* Escalado responsivo */
+    display: block; /* Elimina espacios innecesarios */
+    margin: 20px auto; /* Centrado vertical */
+}
+
+.play-button {
+    background-color: #993737; /* Color del botón */
+    color: white; /* Texto blanco */
+    padding: 10px 20px; /* Espaciado interno */
+    border: none; /* Sin bordes */
+    border-radius: 5px; /* Bordes redondeados */
+    font-size: 1em; /* Tamaño de la fuente */
+    cursor: pointer; /* Cambia el cursor a mano */
+    transition: background-color 0.3s; /* Suaviza el cambio de color */
+}
+
+.play-button:hover {
+    background-color: #c15050; /* Color al pasar el ratón */
+}
+
+.mute-button {
+    background-color: #4caf50; /* Verde */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-left: 10px; /* Espaciado entre botones */
+}
+
+.mute-button:hover {
+    background-color: #45a049; /* Verde más oscuro */
+}
+
+  
+
+footer {
+    margin-top: 20px;
+    text-align: center;
+    background: #993737;
+    padding: 10px 0;
+}
+
+footer p {
+    margin: 0;
+    color: #fff;
+    font-size: 0.9em;
+}
