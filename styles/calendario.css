@@ -215,6 +215,19 @@ h4{
   font-weight: bold;
 }
 
+footer {
+    margin-top: 20px;
+    text-align: center;
+    background: #993737;
+    padding: 10px 0;
+}
+
+footer p {
+    margin: 0;
+    color: #fff;
+    font-size: 0.9em;
+}
+
 /* Responsive para móviles */
 @media (max-width: 768px) {
     .navbar {
