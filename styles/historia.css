@@ -104,16 +104,16 @@ body {
 .desplegable a {
   text-decoration: none;
   color: white;
-  background-color: #993737; /* Same color as header */
+  background-color: #993737; 
   padding: 12px 16px;
   display: block;
-  text-align: center; /* Center the text */
-  border: 2px solid white; /* White border */
+  text-align: center; 
+  border: 2px solid white; 
   transition: background-color 0.2s;
 }
 
 .desplegable a:hover {
-  background-color: #792929; /* Slightly lighter red on hover */
+  background-color: #792929; 
   color: white;
 }
 
@@ -121,21 +121,21 @@ body {
     position: fixed;
     top: 70px;
     left: 20px;
-    display: inline-flex; /* Para alinear elementos en una fila */
-    align-items: center; /* Centrar verticalmente */
+    display: inline-flex; 
+    align-items: center; 
   }
   
   .boton-atras a {
     font-size: 25px;
     text-decoration: none;
     color: white;
-    display: inline-flex; /* Asegura que los elementos dentro también usen flexbox */
-    align-items: center; /* Centrar verticalmente el texto e imagen */
+    display: inline-flex; 
+    align-items: center; 
   }
   
   .boton-atras img {
-    margin-right: 8px; /* Espacio entre la imagen y el texto */
-    height: 25px; /* Ajusta la altura de la imagen */
+    margin-right: 8px; 
+    height: 25px; 
   }
 
 
