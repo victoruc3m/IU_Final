@@ -156,5 +156,17 @@ body {
     background-color: #FF4500; /* Color al pasar el ratón */
 }
 
+footer {
+    margin-top: 20px;
+    text-align: center;
+    background: #993737;
+    padding: 10px 0;
+}
+
+footer p {
+    margin: 0;
+    color: #fff;
+    font-size: 0.9em;
+}
 
 
