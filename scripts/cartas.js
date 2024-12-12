@@ -30,14 +30,16 @@ document.addEventListener('DOMContentLoaded', function() {
             return;
         }
 
+        const username = currentUser.split('=')[1];
         const userData = {
+            username: username,
             name: nombre,
             email: email,
             subject: asunto,
             message: mensaje
         };
 
-        document.cookie = `userData=${JSON.stringify(userData)}; path=/;`;
+        document.cookie = `carta=${JSON.stringify(userData)}; path=/;`;
         alert('Carta enviada a Papá Noel con éxito.');
         form.reset();
     });

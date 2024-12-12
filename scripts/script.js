@@ -5,6 +5,8 @@ document.addEventListener('DOMContentLoaded', function() {
     const menuPerfil = document.getElementById('menu-perfil');
     const cerrarSesionBtn = document.getElementById('cerrar-sesion');
     const miPerfilBtn = document.getElementById('mi-perfil');
+    const misExperiencias = document.getElementById('mis-experiencias');
+    const misCartas = document.getElementById('mis-cartas');
     const body = document.body;
 
     //Para que el perfil se muestre cuando se esta registrado (no funcionaba entre paginas)
@@ -304,4 +306,16 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         }
     });
+
+    misExperiencias.addEventListener('click', function() {
+        window.location.href = 'misexperiencias.html';
+    });
+
+    misCartas.addEventListener('click', function() {
+        window.location.href = 'miscartas.html';
+    });
+
+
+
+
 });
