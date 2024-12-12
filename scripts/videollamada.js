@@ -3,10 +3,10 @@ document.addEventListener('DOMContentLoaded', () => {
     const playButton = document.getElementById('play-button');
     const muteButton = document.getElementById('mute-button');
 
-    // Botón para reproducir/pausar el video
+    // botón para reproducir/pausar el video
     playButton.addEventListener('click', () => {
         if (video.paused || video.ended) {
-            video.volume = 1.0; // Configura el volumen al máximo
+            video.volume = 1.0; // volumen al máximo
             video.play()
                 .then(() => {
                     playButton.textContent = "Pausar Videollamada";
@@ -20,13 +20,13 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // Botón para silenciar/activar sonido
+    // botón para silenciar/activar sonido
     muteButton.addEventListener('click', () => {
         if (video.muted) {
-            video.muted = false; // Activa el sonido
+            video.muted = false; // activa el sonido
             muteButton.textContent = "Silenciar";
         } else {
-            video.muted = true; // Silencia el video
+            video.muted = true; // silencia
             muteButton.textContent = "Activar sonido";
         }
     });
