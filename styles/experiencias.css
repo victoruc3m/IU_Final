@@ -115,6 +115,12 @@ body {
   color: white;
 }
 
+.nav-links a[href="experiencias.html"] {
+  color: gold;
+  font-weight: bold;
+}
+
+
 /*Estilos elección experiencia*/
 
 
