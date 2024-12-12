@@ -119,6 +119,27 @@ body {
   color: white;
 }
 
+ .boton-atras {
+    position: fixed;
+    top: 70px;
+    left: 20px;
+    display: inline-flex; /* Para alinear elementos en una fila */
+    align-items: center; /* Centrar verticalmente */
+  }
+  
+  .boton-atras a {
+    font-size: 25px;
+    text-decoration: none;
+    color: white;
+    display: inline-flex; /* Asegura que los elementos dentro también usen flexbox */
+    align-items: center; /* Centrar verticalmente el texto e imagen */
+  }
+  
+  .boton-atras img {
+    margin-right: 8px; /* Espacio entre la imagen y el texto */
+    height: 25px; /* Ajusta la altura de la imagen */
+  }
+
 
 .video-container {
     text-align: center; 
