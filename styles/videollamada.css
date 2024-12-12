@@ -6,7 +6,7 @@ body {
   padding: 0;
   font-family: Arial, sans-serif;
   box-sizing: border-box;
-  overflow-x: hidden; /* Evitar scroll horizontal */
+  overflow-x: hidden; 
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -106,45 +106,45 @@ body {
 .desplegable a {
   text-decoration: none;
   color: white;
-  background-color: #993737; /* Same color as header */
+  background-color: #993737; 
   padding: 12px 16px;
   display: block;
-  text-align: center; /* Center the text */
-  border: 2px solid white; /* White border */
+  text-align: center; 
+  border: 2px solid white;
   transition: background-color 0.2s;
 }
 
 .desplegable a:hover {
-  background-color: #792929; /* Slightly lighter red on hover */
+  background-color: #792929; 
   color: white;
 }
 
 
 .video-container {
-    text-align: center; /* Centrar el texto */
-    font-size: 1.5em; /* Ajusta el tamaño de la fuente */
-    color: #993737; /* Color rojo oscuro */
-    margin: 50px auto; /* Añade margen superior e inferior */
+    text-align: center; 
+    font-size: 1.5em;
+    color: #993737; 
+    margin: 50px auto; 
 	margin-top: 90px;
 }
 
 #papa-noel-video {
-    border: 5px solid #993737; /* Marco alrededor del video */
-    border-radius: 10px; /* Bordes redondeados */
-    max-width: 100%; /* Escalado responsivo */
-    display: block; /* Elimina espacios innecesarios */
-    margin: 20px auto; /* Centrado vertical */
+    border: 5px solid #993737; 
+    border-radius: 10px; 
+    max-width: 100%; 
+    display: block; 
+    margin: 20px auto; 
 }
 
 .play-button {
-    background-color: #993737; /* Color del botón */
-    color: white; /* Texto blanco */
-    padding: 10px 20px; /* Espaciado interno */
-    border: none; /* Sin bordes */
-    border-radius: 5px; /* Bordes redondeados */
-    font-size: 1em; /* Tamaño de la fuente */
-    cursor: pointer; /* Cambia el cursor a mano */
-    transition: background-color 0.3s; /* Suaviza el cambio de color */
+    background-color: #993737; 
+    color: white; 
+    padding: 10px 20px; 
+    border: none; 
+    border-radius: 5px; 
+    font-size: 1em; 
+    cursor: pointer; 
+    transition: background-color 0.3s; 
 }
 
 .play-button:hover {
