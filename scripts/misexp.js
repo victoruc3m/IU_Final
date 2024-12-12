@@ -5,27 +5,27 @@ document.addEventListener('DOMContentLoaded', function() {
         if (parts.length === 2) return parts.pop().split(';').shift();
     }
 
-    function displayPurchasedItems() {
-        const finalPurchase = JSON.parse(getCookie('finalPurchase'));
+    function mostrarExpCompradas() {
+        const datosCompra = JSON.parse(getCookie('finalPurchase'));
         const currentUser = getCookie('currentUser');
-        if (finalPurchase && finalPurchase.username === currentUser) {
-            const { selections, username } = finalPurchase;
-            const exp1Quantity = parseInt(selections.exp1) || 0;
-            const exp2Quantity = parseInt(selections.exp2) || 0;
+        if (datosCompra && datosCompra.username === currentUser) {
+            const { selections, username } = datosCompra;
+            const cantidadViaje = parseInt(selections.exp1) || 0; // Cantidad de Viaja con Papá Noel
+            const cantidadEntrega = parseInt(selections.exp2) || 0; // Cantidad de Entrega de Regalos Personalizada
 
-            const purchasedItemsContainer = document.getElementById('mostrar-misexp');
-            purchasedItemsContainer.innerHTML = `
-            <h2>Experiencias Compradas por el usuario: ${username}</h2>
+            const mostrarMisExp = document.getElementById('mostrar-misexp');
+            mostrarMisExp.innerHTML = `
+            <h2>Experiencias que usted ha comprado (${username}):</h2>
             <ul>
-                <li>${exp1Quantity}x Viaja con Papá Noel</li>
-                <li>${exp2Quantity}x Entrega de Regalos Personalizada</li>
+                <li>${cantidadViaje}x Viaja con Papá Noel</li>
+                <li>${cantidadEntrega}x Entrega de Regalos Personalizada</li>
             </ul>
             `;
         } else {
-            const purchasedItemsContainer = document.getElementById('mostrar-misexp');
-            purchasedItemsContainer.innerHTML = '<p>No se encontraron experiencias compradas.</p>';
+            const mostrarMisExp = document.getElementById('mostrar-misexp');
+            mostrarMisExp.innerHTML = '<p>No has comprado ninguna experiencia.</p>';
         }
     }
 
-    displayPurchasedItems();
+    mostrarExpCompradas();
 });

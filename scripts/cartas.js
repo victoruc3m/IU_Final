@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const asunto = document.getElementById('asunto').value;
         const mensaje = document.getElementById('mensaje').value;
 
-        // Simple validation
+        // Validamos los campos de la carta
         if (nombre.length < 3) {
             alert('El nombre debe tener al menos 3 caracteres.');
             return;
@@ -23,7 +23,6 @@ document.addEventListener('DOMContentLoaded', function() {
             return;
         }
 
-        
         const currentUser = document.cookie.split('; ').find(row => row.startsWith('currentUser='));
         if (!currentUser) {
             alert('Debes estar registrado para enviar una carta.');
@@ -40,7 +39,7 @@ document.addEventListener('DOMContentLoaded', function() {
         };
 
         document.cookie = `carta=${JSON.stringify(userData)}; path=/;`;
-        alert('Carta enviada a Papá Noel con éxito.');
+        alert('Tu carta se ha enviado con éxito.');
         form.reset();
     });
 });

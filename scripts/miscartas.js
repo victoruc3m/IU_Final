@@ -1,22 +1,20 @@
 
 document.addEventListener('DOMContentLoaded', function() {
-    const mostrarMiscartasDiv = document.getElementById('mostrar-miscartas');
+    const mostrarMisCartas = document.getElementById('mostrar-miscartas');
     const cartaCookie = getCookie('carta');
-    const currentUser = getCookie('currentUser');
+    const usuarioSesion = getCookie('currentUser');
 
-    if (currentUser) {
+    if (usuarioSesion) {
         if (cartaCookie) {
             const carta = JSON.parse(cartaCookie);
-            mostrarMiscartasDiv.innerHTML = `<p>Carta del usuario: ${currentUser}</p>
+            mostrarMisCartas.innerHTML = `<p>Carta del usuario: ${usuarioSesion}</p>
                                             <p>Nombre: ${carta.name}</p>
                                             <p>Asunto: ${carta.subject}</p>
                                             <p>Mensaje: ${carta.message}</p>
                                             `;
         } else {
-            mostrarMiscartasDiv.innerHTML = `<p>Usted (${currentUser}) no ha enviado ninguna carta.</p>`;
+            mostrarMisCartas.innerHTML = `<p>Usted (${usuarioSesion}) no ha enviado ninguna carta.</p>`;
         }
-    } else {
-        mostrarMiscartasDiv.innerHTML = `<p>No user found.</p>`;
     }
 });
 

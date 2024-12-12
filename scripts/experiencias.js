@@ -20,14 +20,15 @@ function getCookie(name) {
 }
 
 function saveSelection() {
-    const currentUser = getCookie('currentUser');
-    if (currentUser) {
+    const usuario = getCookie('currentUser');
+    if (usuario) {
         const exp1 = document.getElementById('exp1').value;
         const exp2 = document.getElementById('exp2').value;
         const selections = { exp1, exp2 };
-        document.cookie = `selections=${JSON.stringify(selections)}; path=/; max-age=31536000`; // Cookie valid for 1 year
+        document.cookie = `selections=${JSON.stringify(selections)}; path=/; max-age=86400`;
         window.location.href = 'experiencia2.html'; 
     } else {
+        // Si no se ha iniciado sesión no se puede pasar a la siguiente página
         alert('Por favor, inicie sesión para continuar.');
         window.location.href = 'experiencia.html'; 
     }

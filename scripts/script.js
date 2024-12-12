@@ -9,12 +9,12 @@ document.addEventListener('DOMContentLoaded', function() {
     const misCartas = document.getElementById('mis-cartas');
     const body = document.body;
 
-    //Para que el perfil se muestre cuando se esta registrado (no funcionaba entre paginas)
+    //Para que el perfil se siga mostrando al cambiar de pagina (si se ha iniciado sesión)
     function verUsuario() {
         const authButtons = document.getElementById('auth-buttons');
         const menuPerfil = document.getElementById('menu-perfil');
-        const cookieValue = getCookie('currentUser');
-        if (cookieValue) {
+        const usuario = getCookie('currentUser');
+        if (usuario) {
             authButtons.style.display = 'none';
             menuPerfil.style.display = 'flex';
         } else {
@@ -27,7 +27,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 
-    // Add CSS styles dynamically
+    // Generación del html y estilos de popups de inicio de sesion y registro
     const style = document.createElement('style');
     style.textContent = `
         .boton-atras {
@@ -51,8 +51,9 @@ document.addEventListener('DOMContentLoaded', function() {
     `;
     document.head.appendChild(style);
 
+    // Función que crea los popup, necesita un título, un array de los campos que se solicitarán, 
+    // una función de validación y la función para enviar los datos
     function createPopup(titleText, fields, validate, onSubmit) {
-        // Create popup overlay
         const popupOverlay = document.createElement('div');
         popupOverlay.style.position = 'fixed';
         popupOverlay.style.top = '0';
@@ -65,7 +66,6 @@ document.addEventListener('DOMContentLoaded', function() {
         popupOverlay.style.alignItems = 'center';
         popupOverlay.style.zIndex = '1000';
 
-        // Create background image container
         const backgroundImageContainer = document.createElement('div');
         backgroundImageContainer.style.position = 'relative';
         backgroundImageContainer.style.width = '100%';
@@ -77,7 +77,6 @@ document.addEventListener('DOMContentLoaded', function() {
         backgroundImageContainer.style.flexDirection = 'column';
         backgroundImageContainer.style.justifyContent = 'center';
 
-        // Create back button
         const backButton = document.createElement('div');
         backButton.className = 'boton-atras';
         backButton.innerHTML = `
@@ -91,18 +90,15 @@ document.addEventListener('DOMContentLoaded', function() {
             body.removeChild(popupOverlay);
         });
 
-        // Create title
         const title = document.createElement('h2');
         title.textContent = titleText;
         title.style.textAlign = 'center';
         title.style.color = 'white';
         title.style.marginTop = '20px';
 
-        // Append title and back button to background image container
         backgroundImageContainer.appendChild(backButton);
         backgroundImageContainer.appendChild(title);
 
-        // Create and append input fields
         const inputFields = {};
         fields.forEach(field => {
             const inputField = document.createElement('input');
@@ -115,13 +111,12 @@ document.addEventListener('DOMContentLoaded', function() {
             inputField.style.border = '1px solid #ccc';
             inputField.style.borderRadius = '5px';
             if (field.value) {
-                inputField.value = field.value; // Set the value if provided
+                inputField.value = field.value;
             }
             inputFields[field.placeholder] = inputField;
             backgroundImageContainer.appendChild(inputField);
         });
 
-        // Create submit button
         const submitButton = document.createElement('button');
         submitButton.textContent = titleText;
         submitButton.style.display = 'block';
@@ -133,7 +128,8 @@ document.addEventListener('DOMContentLoaded', function() {
         submitButton.style.border = 'none';
         submitButton.style.borderRadius = '5px';
         submitButton.addEventListener('click', function() {
-            // Perform validation
+            
+            // Validamos los inputs
             const errors = validate(inputFields);
             if (errors.length > 0) {
                 alert(errors.join('\n'));
@@ -143,16 +139,14 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
 
-        // Append submit button to background image container
         backgroundImageContainer.appendChild(submitButton);
 
-        // Append background image container to overlay
         popupOverlay.appendChild(backgroundImageContainer);
 
-        // Append overlay to body
         body.appendChild(popupOverlay);
     }
 
+    // Función para validar el inicio de sesión
     function validateLogin(fields) {
         const errors = [];
         if (fields['Username'].value.length < 3) {
@@ -162,11 +156,12 @@ document.addEventListener('DOMContentLoaded', function() {
             !/[0-9].*[0-9]/.test(fields['Password'].value) ||
             !/[!@#$%^&*(),.?":{}|<>]/.test(fields['Password'].value) ||
             !/[A-Z]/.test(fields['Password'].value)) {
-            errors.push('Contraseña tiene que tener al menos 10 caracteres, contener 2 números, 1 caracter especial y 1 mayúscula.');
+            errors.push('La contraseña tiene que tener al menos 10 caracteres, de los cuales: 2 números, 1 carácter especial, 1 mayuscula.');
         }
         return errors;
     }
 
+    // Funcion para validar los campos del registro
     function validateRegister(fields) {
         const errors = [];
         if (fields['Nombre'].value.length < 3) {
@@ -229,7 +224,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     alert('Usuario no encontrado.');
                 }
             } else {
-                alert('Usuario no encontrado.');
+                alert('No hay usuarios registrados.');
             }
         });
     });
@@ -252,7 +247,7 @@ document.addEventListener('DOMContentLoaded', function() {
             }
             const userExists = userDataArray.some(user => user.usuario === usuario);
             if (userExists) {
-                alert('Usuario ya existe.');
+                alert('Ese usuario ya existe.');
                 return;
             }
             const userData = {
@@ -265,15 +260,14 @@ document.addEventListener('DOMContentLoaded', function() {
                 password: inputFields['Contraseña'].value
             };
             userDataArray.push(userData);
-            document.cookie = `userData=${JSON.stringify(userDataArray)}; path=/; max-age=31536000`; // Cookie valid for 1 year
+            document.cookie = `userData=${JSON.stringify(userDataArray)}; path=/; max-age=31536000`;
         });
     });
 
     cerrarSesionBtn.addEventListener('click', function() {
-        // Delete the currentUser cookie
+        // Borramos la cookie de usuario actual
         deleteCookie('currentUser');
 
-        // Show auth buttons and hide profile menu
         authButtons.style.display = 'flex';
         menuPerfil.style.display = 'none';
     });
@@ -301,7 +295,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     user.ciudad = inputFields['Ciudad'].value;
                     user.correo = inputFields['Correo'].value;
                     user.password = inputFields['Contraseña'].value;
-                    document.cookie = `userData=${JSON.stringify(userDataArray)}; path=/; max-age=31536000`; // Update cookie
+                    document.cookie = `userData=${JSON.stringify(userDataArray)}; path=/; max-age=31536000`;
                 });
             }
         }
