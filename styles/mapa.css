@@ -136,7 +136,13 @@ body {
     margin-right: 8px; 
     height: 25px; 
   }
-  
+
+.nav-links a[href="mapa.html"] {
+  color: gold;
+  font-weight: bold;
+}
+
+
 .image-center {
     display: flex;
     justify-content: center;
