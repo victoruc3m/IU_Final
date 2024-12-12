@@ -155,6 +155,17 @@ p{
   }
   
   .boton-atras img {
+<<<<<<< HEAD
     margin-right: 8px; 
     height: 25px; 
   }
+=======
+    margin-right: 8px; /* Espacio entre la imagen y el texto */
+    height: 25px; /* Ajusta la altura de la imagen */
+  }
+
+.nav-links a[href="cuentos.html"] {
+  color: gold;
+  font-weight: bold;
+}
+>>>>>>> 7f3ef3fde9a8d969837bf835eba2cad15c9c1545

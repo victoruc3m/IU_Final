@@ -103,6 +103,11 @@
     color: white;
 }
 
+.nav-links a[href="cartas.html"] {
+  color: gold;
+  font-weight: bold;
+}
+
 
 /*Estilos Pagina principal*/
 body {

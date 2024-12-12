@@ -137,7 +137,15 @@ body {
     height: 25px; 
   }
 
+<<<<<<< HEAD
 /*Contenido de laa seccion de la historia*/
+=======
+.nav-links a[href="historia.html"] {
+  color: gold;
+  font-weight: bold;
+}
+
+>>>>>>> 7f3ef3fde9a8d969837bf835eba2cad15c9c1545
 .info-section {
     padding: 20px;
     padding-top: 60px;

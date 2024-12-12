@@ -117,6 +117,12 @@ body {
   color: white;
 }
 
+.nav-links a[href="jugar.html"] {
+  color: gold;
+  font-weight: bold;
+}
+
+
 /* Contenedor principal del menú y juegos */
 .juega-container_ {
     display: flex;
