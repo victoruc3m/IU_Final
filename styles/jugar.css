@@ -107,16 +107,16 @@ body {
 .desplegable a {
   text-decoration: none;
   color: white;
-  background-color: #993737; /* Same color as header */
+  background-color: #993737; 
   padding: 12px 16px;
   display: block;
-  text-align: center; /* Center the text */
-  border: 2px solid white; /* White border */
+  text-align: center; 
+  border: 2px solid white; 
   transition: background-color 0.2s;
 }
 
 .desplegable a:hover {
-  background-color: #792929; /* Slightly lighter red on hover */
+  background-color: #792929; 
   color: white;
 }
 
@@ -171,21 +171,21 @@ body {
     position: fixed;
     top: 70px;
     left: 20px;
-    display: inline-flex; /* Para alinear elementos en una fila */
-    align-items: center; /* Centrar verticalmente */
+    display: inline-flex; 
+    align-items: center; 
   }
   
   .boton-atras a {
     font-size: 25px;
     text-decoration: none;
     color: white;
-    display: inline-flex; /* Asegura que los elementos dentro también usen flexbox */
-    align-items: center; /* Centrar verticalmente el texto e imagen */
+    display: inline-flex; 
+    align-items: center; 
   }
   
   .boton-atras img {
-    margin-right: 8px; /* Espacio entre la imagen y el texto */
-    height: 25px; /* Ajusta la altura de la imagen */
+    margin-right: 8px; 
+    height: 25px; 
   }
 
 
@@ -204,7 +204,7 @@ body {
 	border: 3px solid #800000;
 }
 
-/* Estilo del tablero del Tres en Raya */
+/* Estilo del tablero del tres en raya */
 #tic-tac-toe {
     display: grid;
     grid-template-columns: repeat(3, 100px);
@@ -227,22 +227,22 @@ body {
     width: 100px;
     height: 100px;
     cursor: grab;
-    object-fit: cover; /* Mantiene las proporciones de la imagen */
-    position: relative; /* Evita movimiento inesperado */
+    object-fit: cover; 
+    position: relative; 
 }
 
 
 .gift:active {
-    cursor: grabbing; /* Cambia el cursor al arrastrar */
+    cursor: grabbing; 
 }
 
 #sack {
-    width: 200px; /* Ancho del saco */
-    height: 300px; /* Altura del saco */
-    border: 2px dashed #000; /* Borde visible para referencia */
-    position: relative; /* Base para posicionar elementos en su interior */
-    margin: 20px auto; /* Centra el saco horizontalmente */
-    background-color: #f9f9f9; /* Fondo opcional */
+    width: 200px; 
+    height: 300px; 
+    border: 2px dashed #000; 
+    position: relative; 
+    margin: 20px auto; 
+    background-color: #f9f9f9; 
 }
 
 #sack-img {
@@ -252,13 +252,13 @@ body {
 }
 
 .gift-in-sack {
-    position: absolute; /* Apila los regalos sobre el saco */
-    top: 30%; /* Ajusta esta posición según tu diseño */
-    left: 50%; /* Centra horizontalmente */
+    position: absolute; /* Pone los regalos sobre el saco */
+    top: 30%; 
+    left: 50%; 
     transform: translate(-50%, -50%); /* Ajusta el regalo al centro del contenedor */
     width: 60px; /* Tamaño fijo del regalo */
     height: 60px;
-    object-fit: cover; /* Mantiene las proporciones de la imagen */
+    object-fit: cover; 
 }
 
 
